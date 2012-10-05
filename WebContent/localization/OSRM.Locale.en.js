@@ -57,7 +57,7 @@ OSRM.Localization["en"] = {
 "NO_RESULTS_FOUND_TARGET": "No results found for end",
 // routing
 "ROUTE_DESCRIPTION": "Route Description",
-"GET_LINK_TO_ROUTE": "Generate Link",
+"GET_LINK_TO_ROUTE": "Permalink",
 "GENERATE_LINK_TO_ROUTE": "waiting for link",
 "LINK_TO_ROUTE_TIMEOUT": "not available",
 "GPX_FILE": "GPX File",

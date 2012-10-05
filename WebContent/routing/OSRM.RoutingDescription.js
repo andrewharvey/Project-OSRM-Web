@@ -40,36 +40,6 @@ onClickRouteDescription: function(lat, lng) {
 	OSRM.G.markers.highlight.show();
 	OSRM.G.markers.highlight.centerView(OSRM.DEFAULTS.HIGHLIGHT_ZOOM_LEVEL);	
 },
-onClickCreateShortcut: function(src){
-	src += '&z='+ OSRM.G.map.getZoom() + '&center=' + OSRM.G.map.getCenter().lat.toFixed(6) + ',' + OSRM.G.map.getCenter().lng.toFixed(6);
-	src += '&alt='+OSRM.G.active_alternative;
-	src += '&df=' + OSRM.G.active_distance_format;
-	src += '&re=' + OSRM.G.active_routing_engine;
-	
-	var source = OSRM.DEFAULTS.SHORTENER_PARAMETERS.replace(/%url/, OSRM.DEFAULTS.HOST_SHORTENER_URL+src); 
-	
-	OSRM.JSONP.call(source, OSRM.RoutingDescription.showRouteLink, OSRM.RoutingDescription.showRouteLink_TimeOut, OSRM.DEFAULTS.JSONP_TIMEOUT, 'shortener');
-	document.getElementById('route-link').innerHTML = '['+OSRM.loc("GENERATE_LINK_TO_ROUTE")+']';
-},
-showRouteLink: function(response){
-	if(!response || !response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER]) {
-		OSRM.RoutingDescription.showRouteLink_TimeOut();
-		return;
-	}
-	
-	OSRM.G.active_shortlink = response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER];
-	document.getElementById('route-link').innerHTML =
-		'[<a class="route-link" onClick="OSRM.RoutingDescription.showQRCode();">'+OSRM.loc("QR")+'</a>]' + ' ' +
-		'[<a class="route-link" href="' +OSRM.G.active_shortlink+ '">'+OSRM.G.active_shortlink.substring(7)+'</a>]';
-},
-showRouteLink_TimeOut: function(){
-	document.getElementById('route-link').innerHTML = '['+OSRM.loc("LINK_TO_ROUTE_TIMEOUT")+']';
-},
-showQRCode: function(response){
-	if( OSRM.G.qrcodewindow )
-		OSRM.G.qrcodewindow.close();	
-	OSRM.G.qrcodewindow = window.open( OSRM.RoutingDescription.QR_DIRECTORY+"qrcodes.html","","width=280,height=250,left=100,top=100,dependent=yes,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,resizable=no");
-},
 
 // handling of routing description
 show: function(response) {
@@ -82,7 +52,7 @@ show: function(response) {
 		query_string += '&loc=' + OSRM.G.markers.route[i].getLat().toFixed(6) + ',' + OSRM.G.markers.route[i].getLng().toFixed(6); 
  						
 	// create link to the route
-	var route_link ='[<a class="route-link" onclick="OSRM.RoutingDescription.onClickCreateShortcut(\'' + OSRM.DEFAULTS.WEBSITE_URL + query_string + '\')">'+OSRM.loc("GET_LINK_TO_ROUTE")+'</a>]';
+	var route_link ='[<a class="route-link" href="' + OSRM.DEFAULTS.WEBSITE_URL + query_string + '">'+OSRM.loc("GET_LINK_TO_ROUTE")+'</a>]';
 
 	// create GPX link
 	var gpx_link = '[<a class="route-link" onClick="document.location.href=\'' + OSRM.G.active_routing_server_url + query_string + '&output=gpx\';">'+OSRM.loc("GPX_FILE")+'</a>]';
