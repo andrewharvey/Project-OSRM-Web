@@ -130,7 +130,7 @@ OSRM.Localization["en"] = {
 									"<br/><br/>" +
 									"You can even create intermediate markers by dragging them off of the main route! ",
 // do not translate below this line
-"GUI_LEGAL_NOTICE": "This <a href='https://github.com/andrewharvey/Project-OSRM-Web/tree/tianjara'>web front end</a> to the <a href='http://project-osrm.org/'>Project OSRM</a> routing engine is using <a href='http://fosm.org/'>FOSM.org</a> map data. Geocoding is provided by the OSM instance of <a href='http://wiki.openstreetmap.org/wiki/Nominatim/'>Nominatim</a> which uses <a href='http://www.openstreetmap.org/'>OpenStreetMap</a> data.",
+"GUI_LEGAL_NOTICE": "This <a href='https://github.com/andrewharvey/Project-OSRM-Web/tree/tianjara'>web front end</a> to the <a href='http://project-osrm.org/'>Project OSRM</a> routing engine is using <a href='http://fosm.org/'>FOSM.org</a> map data and a <a href='https://gist.github.com/3843666'>personalised routing profile</a>. Geocoding is provided by the OSM instance of <a href='http://wiki.openstreetmap.org/wiki/Nominatim/'>Nominatim</a> which uses <a href='http://www.openstreetmap.org/'>OpenStreetMap</a> data.",
 "GUI_DATA_TIMESTAMP": "data: ",
 "GUI_VERSION": "gui: ",
 "QR": "QR"
