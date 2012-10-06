@@ -85,18 +85,6 @@ OSRM.DEFAULTS = {
 			url:'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
 			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
 			options:{maxZoom: 18}
-		},
-		{
-			display_name: 'Bing Road',
-			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	// please use your own apikey (http://msdn.microsoft.com/en-us/library/ff428642.aspx) 
-			options:{type:"Road", minZoom: 1},
-			bing:true,
-		},
-		{
-			display_name: 'Bing Aerial',
-			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	// please use your own apikey (http://msdn.microsoft.com/en-us/library/ff428642.aspx)
-			options:{type:"Aerial", minZoom: 1},
-			bing:true,
 		}
 	],
 
