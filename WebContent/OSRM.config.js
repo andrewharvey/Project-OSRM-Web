@@ -70,21 +70,6 @@ OSRM.DEFAULTS = {
 			url:'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 Mapnik',
 			options:{maxZoom: 18}
-		},
-		{	display_name: 'osm.de',
-			url:'http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 Mapnik',
-			options:{maxZoom: 18}
-		},
-		{	display_name: 'MapQuest',
-			url:'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 MapQuest',
-			options:{maxZoom: 18, subdomains: '1234'}
-		},
-		{	display_name: 'CloudMade',
-			url:'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
-			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-			options:{maxZoom: 18}
 		}
 	],
 
