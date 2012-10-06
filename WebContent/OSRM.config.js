@@ -20,8 +20,8 @@ or see http://www.gnu.org/licenses/agpl.txt.
 
 OSRM.DEFAULTS = {
 	ROUTING_ENGINES: [
-		{	url: 'http://router.project-osrm.org/viaroute',
-			timestamp: 'http://router.project-osrm.org/timestamp',
+		{	url: '/viaroute',
+			timestamp: '/timestamp',
 			metric: 0,
 			label: 'ENGINE_0',
 		}
@@ -42,9 +42,9 @@ OSRM.DEFAULTS = {
 	HIGHLIGHT_ZOOM_LEVEL: 16,
 	JSONP_TIMEOUT: 10000,
 	
-	ONLOAD_ZOOM_LEVEL: 5,
-	ONLOAD_LATITUDE: 48.84,
-	ONLOAD_LONGITUDE: 10.10,
+	ONLOAD_ZOOM_LEVEL: 10,
+	ONLOAD_LATITUDE: -33.85,
+	ONLOAD_LONGITUDE: 151.20,
 	ONLOAD_SOURCE: "",
 	ONLOAD_TARGET: "",
 	
@@ -66,9 +66,14 @@ OSRM.DEFAULTS = {
 	],
 		
 	TILE_SERVERS: [
+		{	display_name: 'fosm (local)',
+			url:'//tile.tianjara.net/fosm/mapnik/{z}/{x}/{y}.png',
+			attribution:"Map Data &amp; Map Image &copy; <a href='http://www.openstreetmap.org/'>OpenStreetMap</a> &amp; <a href='http://www.fosm.org/'>FOSM</a> Contributors <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>CC BY-SA 2.0</a>",
+			options:{maxZoom: 19}
+		},
 		{	display_name: 'osm.org',
 			url:'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 Mapnik',
+			attribution:"Map Image &copy; <a href='http://www.openstreetmap.org/'>OpenStreetMap</a> Contributors <a rel='license' href='http://creativecommons.org/licenses/by-sa/2.0/'>CC BY-SA 2.0</a>",
 			options:{maxZoom: 18}
 		}
 	],
